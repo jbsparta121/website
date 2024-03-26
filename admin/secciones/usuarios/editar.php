@@ -51,7 +51,6 @@ include("../../templates/header.php");
                     placeholder="ID"
                 />
             </div>
-            
 
             <div class="mb-3">
                 <label for="usuario" class="form-label">Nombre del usuario:</label>
@@ -65,8 +64,8 @@ include("../../templates/header.php");
                     placeholder="Nombre del usuario"
                 />
             </div>
-            
-            <div class="mb-3">
+
+            <div class="mb-6">
                 <label for="password" class="form-label">Password:</label>
                 <input
                     value="<?php echo $password; ?>"
@@ -77,8 +76,10 @@ include("../../templates/header.php");
                     aria-describedby="helpId"
                     placeholder="Password"
                 />
+                <label for="ver-password" class="form-label">Ver Contraseña</label>
+                <input type="checkbox" name="ver-password" id="ver-password" onchange="verPassword()">
             </div>
-            
+
             <div class="mb-3">
                 <label for="correo" class="form-label">Correo:</label>
                 <input
@@ -98,7 +99,7 @@ include("../../templates/header.php");
                 >
                 Agregar
             </button>
-                
+            
             <a
                 name=""
                 id=""
@@ -113,5 +114,13 @@ include("../../templates/header.php");
     </div>
     <div class="card-footer text-muted"></div>
 </div>
+
+<script>
+    function verPassword() {
+        let passwordInput = document.getElementById('password');
+        let checkPassInput = document.getElementById('ver-password');
+        passwordInput.type = checkPassInput.checked ? 'text' : 'password';
+    }
+</script>
 
 <?php include("../../templates/footer.php") ?>

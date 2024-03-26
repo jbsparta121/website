@@ -16,12 +16,10 @@ $sentencia = $conexion->prepare("SELECT * FROM tbl_entradas");
 $sentencia->execute();
 $lista_entradas = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
-// selecciona los registros de entradas
+// selecciona los registros del equipo
 $sentencia = $conexion->prepare("SELECT * FROM tbl_equipo");
 $sentencia->execute();
 $lista_equipo = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-?>
-
 ?>
 
 <!DOCTYPE html>

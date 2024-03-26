@@ -23,9 +23,7 @@ include("../../templates/header.php");
         <div
         class="table-responsive-sm"
         >
-            <table
-                class="table"
-            >
+            <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">Usuario</th>
@@ -38,8 +36,8 @@ include("../../templates/header.php");
                     <?php foreach($lista_usuarios as $registros) { ?>
                     <tr class="">
                         <td><?php echo $registros['usuario'] ?></td>
-                        <td><?php echo $registros['password'] ?></td>
                         <td><?php echo $registros['correo'] ?></td>
+                        <td><?php echo $registros['password'] ?></td>
                         <td>
                             <a name="" id="" class="btn btn-info" href="editar.php?txtId=<?php echo $registros['id']; ?>" role="button">Editar</a> 
                             |
